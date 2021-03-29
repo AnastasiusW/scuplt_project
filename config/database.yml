@@ -17,9 +17,12 @@
 default: &default
   adapter: postgresql
   encoding: unicode
+  host: localhost
   # For details on connection pooling, see Rails configuration guide
   # https://guides.rubyonrails.org/configuring.html#database-pooling
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  username: <%= Rails.application.credentials.config[:database][:postgresql_user] %>
+  password: <%= Rails.application.credentials.config[:database][:postgresql_password] %>
 
 development:
   <<: *default
@@ -79,7 +82,4 @@ test:
 #     url: <%= ENV['DATABASE_URL'] %>
 #
 production:
-  <<: *default
-  database: scuplt_project_production
-  username: scuplt_project
-  password: <%= ENV['SCUPLT_PROJECT_DATABASE_PASSWORD'] %>
+  url: <%= ENV['DATABASE_URL']%>
