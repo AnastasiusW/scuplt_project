@@ -1,0 +1,7 @@
+<div  id="div_id_input">
+<%=form_tag(tasks_path, method: :get) do %>
+<p><%= t('form.input') %></p>
+<%= text_field_tag(:task_id,params[:task_id])%>
+<%= submit_tag("Submit")%>
+<%end%>
+</div>

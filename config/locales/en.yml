@@ -31,3 +31,39 @@
 
 en:
   hello: "Hello world"
+
+  new:
+    status: "Status:"
+    task_number: "Task Number:"
+    comment: "Comment:"
+    Date: "Date:"
+    title: New task
+
+  show:
+    status: "Status:"
+    task_number: "Task Number:"
+    comment: "Comment:"
+    Date: "Date:"
+    title: "New task:"
+    id: "Task %{id}"
+
+  edit:
+    title: Edit task
+
+  form:
+    number: "Number:"
+    comment: "Comment:"
+    date: "Date:"
+    status: "Status:"
+    title: Task
+    id: "Task %{id}"
+    input: Input number of task
+
+  flash:
+    create: Task was created!
+
+  default:
+    login: Login
+    new_task: New task
+    edit_task: Edit task
+    view_task: View all task

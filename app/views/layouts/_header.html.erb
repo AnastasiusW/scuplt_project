@@ -1,0 +1,9 @@
+<% if user_signed_in? %>
+<%= link_to t('default.new_task'), new_task_path %><br>
+<%= link_to t('default.view_task'), tasks_path %><br>
+
+
+ <%= link_to t('default.logout'), destroy_user_session_path, method: :delete %><br>
+ <%else%>
+<%= link_to t('default.login'), new_user_session_path%>
+<%end%>

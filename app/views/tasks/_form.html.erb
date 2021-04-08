@@ -1,0 +1,35 @@
+<%= simple_form_for @task,class: 'form-group' do |f| %>
+
+  <%= f.input :task_number,
+                   placeholder: t('new.task_number'),
+                   error: @task.errors[:task_number].join(","),
+                   required: true,
+                   class: 'form-field',
+                   autofocus: true,
+                   :input_html => {
+                  :id => "task_number_id"
+                   } %>
+
+  <%= f.select :status,
+                  options_for_select(Task.statuses.keys),
+                  required: true,
+                  label: "Status",
+                  class: 'form-field',
+                  placeholder: t('new.status')
+                    %>
+
+  <%= f.input :comment,
+                    placeholder: t('new.comment'),
+                    error: @task.errors[:comment].join(","),
+                    required: true,
+                    class: 'form-field',
+                    autofocus: true %>
+
+  <%= f.input :date,
+         as: :date,
+         label: t('new.date'),
+         required: true %>
+
+
+  <%= f.button :submit %>
+  <% end %>

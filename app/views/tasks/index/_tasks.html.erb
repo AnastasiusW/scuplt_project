@@ -1,0 +1,7 @@
+<h1><%=t('form.id', id: task.id)%></h1>
+<h3><%= link_to  t('default.edit_task'),edit_task_path(task) %> </h3>
+
+<p><b><%=t('form.number')%></b><%= task.task_number %></p>
+<p><b><%=t('form.status')%></b><%= task.status %></p>
+<p><b><%=t('form.comment')%></b><%= task.comment %></p>
+<p><b><%=t("form.date")%></b><%= task.date %></p>
